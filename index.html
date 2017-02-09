@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>联动省级市级选项框</title>
+    <link rel="stylesheet" href="bootstrap.min.css"/>
+    <link rel="stylesheet" href="bootstrap-select.min.css">
+</head>
+<body>
+<div class="select" id="city_select">
+    <select class="province selectpicker" data-value="不限" title="不限">
+    </select>省/直辖市
+    <br>
+    <select class="city selectpicker" title="不限" multiple>
+    </select>市
+</div>
+</body>
+</html>
+<script type="text/javascript">
+    window.jQuery || document.write("<script src='jquery.min.js'>" + "<" + "/script>");
+</script>
+<script src="bootstrap.min.js"></script>
+<script src="bootstrap-select.min.js"></script>
+<script src="index.js"></script>
+<script>
+    $('#city_select').citySelect({
+        selects: ['province', 'city']
+    })
+</script>
